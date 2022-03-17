@@ -10,6 +10,409 @@
 "description": "admin APIs",
 "item": [
 {
+"name": "Plan",
+"description": "Plan Model APIs",
+"item": [
+{
+"name": "Add Plan",
+"request": {
+"url": "{{host}}/api/admin/plans",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"name\": \"aut\", \n  \"decription\": \"id\", \n  \"code\": \"tenetur\", \n  \"validity_in_days\": \"eligendi\", \n  \"minimum_user\": 3, \n  \"maximum_user\": 2, \n  \"per_user_amount\": 5, \n  \"markup\": 3, \n  \"discount\": 2, \n  \"valid_from\": \"2022-03-17 05:29:46\", \n  \"valid_to\": \"2022-03-17 05:29:46\", \n  \"is_active\": false  \n}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Add Plan response",
+"originalRequest": {
+"method": "POST",
+"header": [],
+"url": {
+"raw": "{{host}}/api/admin/plans"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 2, \n    \"name\": \"consequatur\", \n    \"decription\": \"sed\", \n    \"code\": \"voluptatum\", \n    \"validity_in_days\": \"et\", \n    \"minimum_user\": 3, \n    \"maximum_user\": 3, \n    \"per_user_amount\": 1, \n    \"markup\": 4, \n    \"discount\": 3, \n    \"valid_from\": \"2022-03-17 05:29:46\", \n    \"valid_to\": \"2022-03-17 05:29:46\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\"  \n   }\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Plan Details",
+"request": {
+"url": "{{host}}/api/admin/plans/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Plan Details response",
+"originalRequest": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{host}}/api/admin/plans/id"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 2, \n    \"name\": \"consequatur\", \n    \"decription\": \"sed\", \n    \"code\": \"voluptatum\", \n    \"validity_in_days\": \"et\", \n    \"minimum_user\": 3, \n    \"maximum_user\": 3, \n    \"per_user_amount\": 1, \n    \"markup\": 4, \n    \"discount\": 3, \n    \"valid_from\": \"2022-03-17 05:29:46\", \n    \"valid_to\": \"2022-03-17 05:29:46\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\"  \n   }\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+},
+{
+"name": "Plan Listing",
+"request": {
+"method": "GET",
+"url": {
+"raw": "{{host}}/api/admin/plans",
+"host": [
+"{{host}}"
+],
+"path": [
+"api",
+"admin",
+"plans"
+],
+"query": [
+{
+"key": "limit",
+"value": null,
+"disabled": true
+},
+{
+"key": "skip",
+"value": null,
+"disabled": true
+},
+{
+"key": "filter[field_name]",
+"value": null,
+"description": "e.g filter[email] : Search records by field",
+"disabled": true
+},
+{
+"key": "filter[relation.field]",
+"value": null,
+"description": "e.g filter[addedByUser.username] : Search records by relationship fields",
+"disabled": true
+},
+{
+"key": "sort",
+"value": "field_name",
+"description": "e.g created_at : Sort data by field in asc order",
+"disabled": true
+},
+{
+"key": "sort",
+"value": "-field_name",
+"description": "e.g -created_at : Sort data by field in desc order, add dash (-) before field to sort in desc order",
+"disabled": true
+},
+{
+"key": "fields[table_name]",
+"value": "field1,field2,field2",
+"description": "e.g fields[users] : id,username.email => get only given field in response",
+"disabled": true
+},
+{
+"key": "include",
+"value": "relationshipName",
+"disabled": true,
+"description": "e.g include : addedByUser or include : addedByUser,updatedByUser get added relations into response"
+}
+]
+},
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Plan Listing",
+"originalRequest": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{host}}/api/admin/plans"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\":[\n\t\t{\n\t\t\t\"id\": 2, \n\t\t\t\"name\": \"consequatur\", \n\t\t\t\"decription\": \"sed\", \n\t\t\t\"code\": \"voluptatum\", \n\t\t\t\"validity_in_days\": \"et\", \n\t\t\t\"minimum_user\": 3, \n\t\t\t\"maximum_user\": 3, \n\t\t\t\"per_user_amount\": 1, \n\t\t\t\"markup\": 4, \n\t\t\t\"discount\": 3, \n\t\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\"  \n\t\t}\n\t]\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update Plan",
+"request": {
+"url": "{{host}}/api/admin/plans/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"name\": \"aut\", \n  \"decription\": \"id\", \n  \"code\": \"tenetur\", \n  \"validity_in_days\": \"eligendi\", \n  \"minimum_user\": 3, \n  \"maximum_user\": 2, \n  \"per_user_amount\": 5, \n  \"markup\": 3, \n  \"discount\": 2, \n  \"valid_from\": \"2022-03-17 05:29:46\", \n  \"valid_to\": \"2022-03-17 05:29:46\", \n  \"is_active\": false  \n}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Update Plan response",
+"originalRequest": {
+"method": "PUT",
+"header": [],
+"url": {
+"raw": "{{host}}/api/admin/plans/id"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 2, \n    \"name\": \"consequatur\", \n    \"decription\": \"sed\", \n    \"code\": \"voluptatum\", \n    \"validity_in_days\": \"et\", \n    \"minimum_user\": 3, \n    \"maximum_user\": 3, \n    \"per_user_amount\": 1, \n    \"markup\": 4, \n    \"discount\": 3, \n    \"valid_from\": \"2022-03-17 05:29:46\", \n    \"valid_to\": \"2022-03-17 05:29:46\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\"  \n   }\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete Plan",
+"request": {
+"url": "{{host}}/api/admin/plans/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Delete Plan response",
+"originalRequest": {
+"method": "DELETE",
+"header": [],
+"url": {
+"raw": "{{host}}/api/admin/plans/id"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Plan deleted successfully.\"\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add Plan",
+"request": {
+"url": "{{host}}/api/admin/plans/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}, \n\t{\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}\n\t]\n}" },
+"description": ""
+},
+"response": [
+{
+"name": "Bulk Add Plan response",
+"originalRequest": {
+"method": "POST",
+"header": [],
+"url": {
+"raw": "{{host}}/api/admin/plans/bulk-create"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 2, \n\t\t\t\"name\": \"consequatur\", \n\t\t\t\"decription\": \"sed\", \n\t\t\t\"code\": \"voluptatum\", \n\t\t\t\"validity_in_days\": \"et\", \n\t\t\t\"minimum_user\": 3, \n\t\t\t\"maximum_user\": 3, \n\t\t\t\"per_user_amount\": 1, \n\t\t\t\"markup\": 4, \n\t\t\t\"discount\": 3, \n\t\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\"  \n\t\t}\n\t]\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update Plan",
+"request": {
+"url": "{{host}}/api/admin/plans/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}\n\t]\n}" },
+"description": ""
+},
+"response": [
+{
+"name": "Bulk Update Plan response",
+"originalRequest": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{host}}/api/admin/plans/bulk-update"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 2, \n\t\t\t\"name\": \"consequatur\", \n\t\t\t\"decription\": \"sed\", \n\t\t\t\"code\": \"voluptatum\", \n\t\t\t\"validity_in_days\": \"et\", \n\t\t\t\"minimum_user\": 3, \n\t\t\t\"maximum_user\": 3, \n\t\t\t\"per_user_amount\": 1, \n\t\t\t\"markup\": 4, \n\t\t\t\"discount\": 3, \n\t\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\"  \n\t\t}\n\t]\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+]
+},
+{
 "name": "User",
 "description": "User Model APIs",
 "item": [
@@ -32,7 +435,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"saepe\", \n  \"password\": \"temporibus\", \n  \"email\": \"doloribus\", \n  \"name\": \"explicabo\", \n  \"email_verified_at\": \"2022-03-17 05:17:02\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"est\", \n  \"password\": \"ipsa\", \n  \"email\": \"qui\", \n  \"name\": \"quas\", \n  \"email_verified_at\": \"2022-03-17 05:29:46\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
 },
 "description": ""
 },
@@ -49,7 +452,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -98,7 +501,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -204,7 +607,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\":[\n\t\t{\n\t\t\t\"id\": 3, \n\t\t\t\"username\": \"qui\", \n\t\t\t\"email\": \"laudantium\", \n\t\t\t\"name\": \"cumque\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"updated_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\":[\n\t\t{\n\t\t\t\"id\": 4, \n\t\t\t\"username\": \"quo\", \n\t\t\t\"email\": \"illo\", \n\t\t\t\"name\": \"est\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": true, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -236,7 +639,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"saepe\", \n  \"password\": \"temporibus\", \n  \"email\": \"doloribus\", \n  \"name\": \"explicabo\", \n  \"email_verified_at\": \"2022-03-17 05:17:02\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"est\", \n  \"password\": \"ipsa\", \n  \"email\": \"qui\", \n  \"name\": \"quas\", \n  \"email_verified_at\": \"2022-03-17 05:29:46\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
 },
 "description": ""
 },
@@ -253,7 +656,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -334,7 +737,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
 "description": ""
 },
 "response": [
@@ -350,7 +753,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 3, \n\t\t\t\"username\": \"qui\", \n\t\t\t\"email\": \"laudantium\", \n\t\t\t\"name\": \"cumque\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"updated_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 4, \n\t\t\t\"username\": \"quo\", \n\t\t\t\"email\": \"illo\", \n\t\t\t\"name\": \"est\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": true, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -382,7 +785,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
 "description": ""
 },
 "response": [
@@ -398,7 +801,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 3, \n\t\t\t\"username\": \"qui\", \n\t\t\t\"email\": \"laudantium\", \n\t\t\t\"name\": \"cumque\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"updated_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 4, \n\t\t\t\"username\": \"quo\", \n\t\t\t\"email\": \"illo\", \n\t\t\t\"name\": \"est\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": true, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1161,7 +1564,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1209,7 +1612,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"id\": 3,\n    \"username\": \"qui\",\n    \"email\": \"laudantium\",\n    \"name\": \"cumque\",\n    \"email_verified_at\": \"2022-03-17 05:17:02\",\n    \"is_active\": false,\n    \"created_at\": \"2022-03-17 05:17:02\",\n    \"updated_at\": \"2022-03-17 05:17:02\",\n    \"user_type\": 1, \n    \"token\": \"cQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeGcQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeG\"\n\t}\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"id\": 4,\n    \"username\": \"quo\",\n    \"email\": \"illo\",\n    \"name\": \"est\",\n    \"email_verified_at\": \"2022-03-17 05:29:46\",\n    \"is_active\": true,\n    \"created_at\": \"2022-03-17 05:29:46\",\n    \"updated_at\": \"2022-03-17 05:29:46\",\n    \"user_type\": 1, \n    \"token\": \"cQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeGcQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeG\"\n\t}\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1458,6 +1861,409 @@
 "description": "device APIs",
 "item": [
 {
+"name": "Plan",
+"description": "Plan Model APIs",
+"item": [
+{
+"name": "Add Plan",
+"request": {
+"url": "{{host}}/api/device/plans",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"name\": \"aut\", \n  \"decription\": \"id\", \n  \"code\": \"tenetur\", \n  \"validity_in_days\": \"eligendi\", \n  \"minimum_user\": 3, \n  \"maximum_user\": 2, \n  \"per_user_amount\": 5, \n  \"markup\": 3, \n  \"discount\": 2, \n  \"valid_from\": \"2022-03-17 05:29:46\", \n  \"valid_to\": \"2022-03-17 05:29:46\", \n  \"is_active\": false  \n}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Add Plan response",
+"originalRequest": {
+"method": "POST",
+"header": [],
+"url": {
+"raw": "{{host}}/api/device/plans"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 2, \n    \"name\": \"consequatur\", \n    \"decription\": \"sed\", \n    \"code\": \"voluptatum\", \n    \"validity_in_days\": \"et\", \n    \"minimum_user\": 3, \n    \"maximum_user\": 3, \n    \"per_user_amount\": 1, \n    \"markup\": 4, \n    \"discount\": 3, \n    \"valid_from\": \"2022-03-17 05:29:46\", \n    \"valid_to\": \"2022-03-17 05:29:46\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\"  \n   }\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Plan Details",
+"request": {
+"url": "{{host}}/api/device/plans/id",
+"method": "GET",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Plan Details response",
+"originalRequest": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{host}}/api/device/plans/id"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 2, \n    \"name\": \"consequatur\", \n    \"decription\": \"sed\", \n    \"code\": \"voluptatum\", \n    \"validity_in_days\": \"et\", \n    \"minimum_user\": 3, \n    \"maximum_user\": 3, \n    \"per_user_amount\": 1, \n    \"markup\": 4, \n    \"discount\": 3, \n    \"valid_from\": \"2022-03-17 05:29:46\", \n    \"valid_to\": \"2022-03-17 05:29:46\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\"  \n   }\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+},
+{
+"name": "Plan Listing",
+"request": {
+"method": "GET",
+"url": {
+"raw": "{{host}}/api/device/plans",
+"host": [
+"{{host}}"
+],
+"path": [
+"api",
+"device",
+"plans"
+],
+"query": [
+{
+"key": "limit",
+"value": null,
+"disabled": true
+},
+{
+"key": "skip",
+"value": null,
+"disabled": true
+},
+{
+"key": "filter[field_name]",
+"value": null,
+"description": "e.g filter[email] : Search records by field",
+"disabled": true
+},
+{
+"key": "filter[relation.field]",
+"value": null,
+"description": "e.g filter[addedByUser.username] : Search records by relationship fields",
+"disabled": true
+},
+{
+"key": "sort",
+"value": "field_name",
+"description": "e.g created_at : Sort data by field in asc order",
+"disabled": true
+},
+{
+"key": "sort",
+"value": "-field_name",
+"description": "e.g -created_at : Sort data by field in desc order, add dash (-) before field to sort in desc order",
+"disabled": true
+},
+{
+"key": "fields[table_name]",
+"value": "field1,field2,field2",
+"description": "e.g fields[users] : id,username.email => get only given field in response",
+"disabled": true
+},
+{
+"key": "include",
+"value": "relationshipName",
+"disabled": true,
+"description": "e.g include : addedByUser or include : addedByUser,updatedByUser get added relations into response"
+}
+]
+},
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Plan Listing",
+"originalRequest": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{host}}/api/device/plans"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\":[\n\t\t{\n\t\t\t\"id\": 2, \n\t\t\t\"name\": \"consequatur\", \n\t\t\t\"decription\": \"sed\", \n\t\t\t\"code\": \"voluptatum\", \n\t\t\t\"validity_in_days\": \"et\", \n\t\t\t\"minimum_user\": 3, \n\t\t\t\"maximum_user\": 3, \n\t\t\t\"per_user_amount\": 1, \n\t\t\t\"markup\": 4, \n\t\t\t\"discount\": 3, \n\t\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\"  \n\t\t}\n\t]\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Update Plan",
+"request": {
+"url": "{{host}}/api/device/plans/id",
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"name\": \"aut\", \n  \"decription\": \"id\", \n  \"code\": \"tenetur\", \n  \"validity_in_days\": \"eligendi\", \n  \"minimum_user\": 3, \n  \"maximum_user\": 2, \n  \"per_user_amount\": 5, \n  \"markup\": 3, \n  \"discount\": 2, \n  \"valid_from\": \"2022-03-17 05:29:46\", \n  \"valid_to\": \"2022-03-17 05:29:46\", \n  \"is_active\": false  \n}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Update Plan response",
+"originalRequest": {
+"method": "PUT",
+"header": [],
+"url": {
+"raw": "{{host}}/api/device/plans/id"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 2, \n    \"name\": \"consequatur\", \n    \"decription\": \"sed\", \n    \"code\": \"voluptatum\", \n    \"validity_in_days\": \"et\", \n    \"minimum_user\": 3, \n    \"maximum_user\": 3, \n    \"per_user_amount\": 1, \n    \"markup\": 4, \n    \"discount\": 3, \n    \"valid_from\": \"2022-03-17 05:29:46\", \n    \"valid_to\": \"2022-03-17 05:29:46\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\"  \n   }\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Delete Plan",
+"request": {
+"url": "{{host}}/api/device/plans/id",
+"method": "DELETE",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{}"
+},
+"description": ""
+},
+"response": [
+{
+"name": "Delete Plan response",
+"originalRequest": {
+"method": "DELETE",
+"header": [],
+"url": {
+"raw": "{{host}}/api/device/plans/id"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": \"Plan deleted successfully.\"\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Add Plan",
+"request": {
+"url": "{{host}}/api/device/plans/bulk-create",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}, \n\t{\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}\n\t]\n}" },
+"description": ""
+},
+"response": [
+{
+"name": "Bulk Add Plan response",
+"originalRequest": {
+"method": "POST",
+"header": [],
+"url": {
+"raw": "{{host}}/api/device/plans/bulk-create"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 2, \n\t\t\t\"name\": \"consequatur\", \n\t\t\t\"decription\": \"sed\", \n\t\t\t\"code\": \"voluptatum\", \n\t\t\t\"validity_in_days\": \"et\", \n\t\t\t\"minimum_user\": 3, \n\t\t\t\"maximum_user\": 3, \n\t\t\t\"per_user_amount\": 1, \n\t\t\t\"markup\": 4, \n\t\t\t\"discount\": 3, \n\t\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\"  \n\t\t}\n\t]\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+,
+{
+"name": "Bulk Update Plan",
+"request": {
+"url": "{{host}}/api/device/plans/bulk-update",
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json",
+"description": ""
+},
+{
+"key": "X-Requested-With",
+"value": "XMLHttpRequest",
+"type": "text"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"name\": \"aut\", \n\t\t\"decription\": \"id\", \n\t\t\"code\": \"tenetur\", \n\t\t\"validity_in_days\": \"eligendi\", \n\t\t\"minimum_user\": 3, \n\t\t\"maximum_user\": 2, \n\t\t\"per_user_amount\": 5, \n\t\t\"markup\": 3, \n\t\t\"discount\": 2, \n\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false  \n\t}\n\t]\n}" },
+"description": ""
+},
+"response": [
+{
+"name": "Bulk Update Plan response",
+"originalRequest": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{host}}/api/device/plans/bulk-update"
+}
+},
+"status": "OK",
+"code": 200,
+"_postman_previewlanguage": "json",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 2, \n\t\t\t\"name\": \"consequatur\", \n\t\t\t\"decription\": \"sed\", \n\t\t\t\"code\": \"voluptatum\", \n\t\t\t\"validity_in_days\": \"et\", \n\t\t\t\"minimum_user\": 3, \n\t\t\t\"maximum_user\": 3, \n\t\t\t\"per_user_amount\": 1, \n\t\t\t\"markup\": 4, \n\t\t\t\"discount\": 3, \n\t\t\t\"valid_from\": \"2022-03-17 05:29:46\", \n\t\t\t\"valid_to\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\"  \n\t\t}\n\t]\n}",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"cookie": []
+}
+],
+"_postman_isSubFolder": true
+}
+]
+},
+{
 "name": "User",
 "description": "User Model APIs",
 "item": [
@@ -1480,7 +2286,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"saepe\", \n  \"password\": \"temporibus\", \n  \"email\": \"doloribus\", \n  \"name\": \"explicabo\", \n  \"email_verified_at\": \"2022-03-17 05:17:02\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"est\", \n  \"password\": \"ipsa\", \n  \"email\": \"qui\", \n  \"name\": \"quas\", \n  \"email_verified_at\": \"2022-03-17 05:29:46\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
 },
 "description": ""
 },
@@ -1497,7 +2303,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1546,7 +2352,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1652,7 +2458,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\":[\n\t\t{\n\t\t\t\"id\": 3, \n\t\t\t\"username\": \"qui\", \n\t\t\t\"email\": \"laudantium\", \n\t\t\t\"name\": \"cumque\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"updated_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\":[\n\t\t{\n\t\t\t\"id\": 4, \n\t\t\t\"username\": \"quo\", \n\t\t\t\"email\": \"illo\", \n\t\t\t\"name\": \"est\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": true, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1684,7 +2490,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n  \"username\": \"saepe\", \n  \"password\": \"temporibus\", \n  \"email\": \"doloribus\", \n  \"name\": \"explicabo\", \n  \"email_verified_at\": \"2022-03-17 05:17:02\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
+"raw": "{\n  \"username\": \"est\", \n  \"password\": \"ipsa\", \n  \"email\": \"qui\", \n  \"name\": \"quas\", \n  \"email_verified_at\": \"2022-03-17 05:29:46\", \n  \"is_active\": false, \n  \"user_type\": 1  \n}"
 },
 "description": ""
 },
@@ -1701,7 +2507,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1782,7 +2588,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
 "description": ""
 },
 "response": [
@@ -1798,7 +2604,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 3, \n\t\t\t\"username\": \"qui\", \n\t\t\t\"email\": \"laudantium\", \n\t\t\t\"name\": \"cumque\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"updated_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 4, \n\t\t\t\"username\": \"quo\", \n\t\t\t\"email\": \"illo\", \n\t\t\t\"name\": \"est\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": true, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1830,7 +2636,7 @@
 ],
 "body": {
 "mode": "raw",
-"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"saepe\", \n\t\t\"password\": \"temporibus\", \n\t\t\"email\": \"doloribus\", \n\t\t\"name\": \"explicabo\", \n\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
+"raw": "{\n\t\"data\": [\n\t{\n\t\t\"id\": 1,\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}, \n\t{\n\t\t\"id\": 2,\n\t\t\"username\": \"est\", \n\t\t\"password\": \"ipsa\", \n\t\t\"email\": \"qui\", \n\t\t\"name\": \"quas\", \n\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\"is_active\": false, \n\t\t\"user_type\": 1  \n\t}\n\t]\n}" },
 "description": ""
 },
 "response": [
@@ -1846,7 +2652,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 3, \n\t\t\t\"username\": \"qui\", \n\t\t\t\"email\": \"laudantium\", \n\t\t\t\"name\": \"cumque\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"is_active\": false, \n\t\t\t\"created_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"updated_at\": \"2022-03-17 05:17:02\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": [\n\t\t{\n\t\t\t\"id\": 4, \n\t\t\t\"username\": \"quo\", \n\t\t\t\"email\": \"illo\", \n\t\t\t\"name\": \"est\", \n\t\t\t\"email_verified_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"is_active\": true, \n\t\t\t\"created_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"updated_at\": \"2022-03-17 05:29:46\", \n\t\t\t\"user_type\": 1  \n\t\t}\n\t]\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1900,7 +2706,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 3, \n    \"username\": \"qui\", \n    \"email\": \"laudantium\", \n    \"name\": \"cumque\", \n    \"email_verified_at\": \"2022-03-17 05:17:02\", \n    \"is_active\": false, \n    \"created_at\": \"2022-03-17 05:17:02\", \n    \"updated_at\": \"2022-03-17 05:17:02\", \n    \"user_type\": 1  \n   }\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Your request is successfully executed\",\n  \"data\": {\n    \"id\": 4, \n    \"username\": \"quo\", \n    \"email\": \"illo\", \n    \"name\": \"est\", \n    \"email_verified_at\": \"2022-03-17 05:29:46\", \n    \"is_active\": true, \n    \"created_at\": \"2022-03-17 05:29:46\", \n    \"updated_at\": \"2022-03-17 05:29:46\", \n    \"user_type\": 1  \n   }\n}",
 "header": [
 {
 "key": "Content-Type",
@@ -1948,7 +2754,7 @@
 "status": "OK",
 "code": 200,
 "_postman_previewlanguage": "json",
-"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"id\": 3,\n    \"username\": \"qui\",\n    \"email\": \"laudantium\",\n    \"name\": \"cumque\",\n    \"email_verified_at\": \"2022-03-17 05:17:02\",\n    \"is_active\": false,\n    \"created_at\": \"2022-03-17 05:17:02\",\n    \"updated_at\": \"2022-03-17 05:17:02\",\n    \"user_type\": 1, \n    \"token\": \"cQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeGcQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeG\"\n\t}\n}",
+"body": "{\n  \"status\": \"SUCCESS\",\n  \"message\": \"Login Successful\",\n  \"data\": {\n    \"id\": 4,\n    \"username\": \"quo\",\n    \"email\": \"illo\",\n    \"name\": \"est\",\n    \"email_verified_at\": \"2022-03-17 05:29:46\",\n    \"is_active\": true,\n    \"created_at\": \"2022-03-17 05:29:46\",\n    \"updated_at\": \"2022-03-17 05:29:46\",\n    \"user_type\": 1, \n    \"token\": \"cQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeGcQOkQdVTqnQR8e07AlP5pQkLp4zsjz05wJPW1EeG\"\n\t}\n}",
 "header": [
 {
 "key": "Content-Type",
